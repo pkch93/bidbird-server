@@ -1,6 +1,6 @@
 package com.propgrammers.bidbird.clients;
 
-import com.propgrammers.bidbird.clients.utils.HttpHeaderUtils;
+import com.propgrammers.bidbird.utils.MultiValueMapUtils;
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import io.netty.handler.timeout.WriteTimeoutHandler;
@@ -23,7 +23,7 @@ public abstract class CommonClient {
                 .baseUrl(hostProperties.baseUrl())
                 .clientConnector(connector)
                 .defaultHeaders(httpHeaders -> httpHeaders.addAll(
-                        HttpHeaderUtils.toHttpHeaders(hostProperties.getHeaders()))
+                        MultiValueMapUtils.toMultiValueMap(hostProperties.getHeaders()))
                 )
                 .build();
     }
