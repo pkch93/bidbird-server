@@ -1,0 +1,11 @@
+bidbird:
+  open-api:
+    host:
+      protocol: http
+      host: openapi.onbid.co.kr
+      port: 80
+      connection-timeout: 10000
+      timeout: 20000
+      headers:
+        Content-Type: text/xml;charset=utf-8
+    service-key: ${service-key:none}
