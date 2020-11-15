@@ -2,5 +2,7 @@ bootJar { enabled = false }
 jar { enabled = true }
 
 dependencies {
+    implementation project(':clients:core')
 
+    testImplementation project(':core-test')
 }
