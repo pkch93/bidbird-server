@@ -1,6 +1,8 @@
 rootProject.name = 'bidbird'
 
+include 'core'
+include 'core-test'
 include 'api'
 include 'domain'
 include ':clients:openapi'
-
+include ':clients:common'
