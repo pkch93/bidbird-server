@@ -40,4 +40,16 @@ subprojects {
     test {
         useJUnitPlatform()
     }
+
+    task buildFrontend(type: Exec) {
+        workingDir './src/front'
+        commandLine 'npm', 'run', 'prod'
+
+        dependsOn compileJava
+    }
+
+    task devRunFrontend(type: Exec) {
+        workingDir './src/front'
+        commandLine 'npm', 'run', 'start'
+    }
 }
