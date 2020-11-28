@@ -43,7 +43,7 @@ subprojects {
 
     task buildFrontend(type: Exec) {
         workingDir './src/front'
-        commandLine 'npm', 'run', 'prod'
+        commandLine 'npm', 'run', 'build'
 
         dependsOn compileJava
     }
